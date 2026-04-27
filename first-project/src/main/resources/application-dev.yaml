@@ -1,9 +1,9 @@
 spring:
-  profiles:
-    active: ${env}
   application:
     name: first-project
-  #API KEY OPEN-AI
+
+
+#API KEY OPEN-AI
   ai:
     openai:
       api-key: ${OPENAI_API_KEY}
