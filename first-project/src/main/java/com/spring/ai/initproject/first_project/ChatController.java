@@ -18,7 +18,7 @@ public class ChatController {
         this.chatService = chatService;
     }
     @GetMapping("/v1/chat")
-    public ResponseEntity<String> chatWithGpt(@RequestBody MessageBody msg){
+    public ResponseEntity<String> chatWithGpt(@RequestBody MessageBody msg) throws Exception {
        return ResponseEntity.ok(chatService.promptChatting(msg));
     }
 }
