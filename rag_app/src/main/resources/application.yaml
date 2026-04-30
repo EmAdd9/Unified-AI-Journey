@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: rag_app
+  datasource:
+    url: jdbc:mariadb://localhost:3308/sprringai
+    username: root
+    password: root1234
+  ai:
+    vectorstore:
+      mariadb:
+        initialize-schema: true
+        distance-type: COSINE
+        dimensions: 1536
+    ollama:
+      base-url: http://localhost:11434/
+      chat:
+        options:
+          model: codellama:latest
+          temperature: 0.7
